@@ -1,78 +1,40 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        webdesa
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <div class="first-page bg-gray-800 text-white h-screen flex flex-col justify-between">
+      <div class="content flex flex-col-reverse sm:flex-row md:flex-row w-full items-center h-2/6 md:h-5/6 sm:h-5/6">
+        <div class="date flex items-center">
+          <div class="text flex sm:flex-col md:flex-col px-4 text-center text-xl">
+            <p>01</p> 
+            <p>/</p>
+            <p>02</p>
+          </div>
+        </div>
+        <div class="header flex justify-center w-full">
+          <p class="text-3xl sm:text-4xl md:text-8xl tracking-widest">
+            KADINGEH
+          </p>
+        </div>
       </div>
+      <nuxt-link to="/explore" class="button flex h-1/6 justify-end">
+        <div class="text-white py-4 text-2xl tracking-widest font-semibold  bg-gray-500 w-full md:w-1/5 sm:w-1/5 flex justify-center items-center">
+          Show More
+        </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+  export default {
+    transition: 'slide-bottom'
+  }
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+  .first-page {
+    background-image: url('../assets/img/photo6217556209045712351.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 </style>
